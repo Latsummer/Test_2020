@@ -80,25 +80,36 @@
 //}
 
 
+//int main()
+//{
+//	int qs = 0;//ÆûË®
+//	int kp = 0;//¿ÕÆ¿
+//	int yuan = 0;//Ç®
+//	int num = 0;
+//	while (yuan <= 0)
+//	{
+//		printf("ÊäÈëÇ®Êı£º>   ");
+//		scanf("%d", &yuan);
+//	}
+//	qs = 1 * yuan;
+//	while (qs > 0)
+//	{
+//		num += qs;
+//		kp = qs;
+//		qs = 0;
+//		qs = kp / 2;
+//	}
+//	printf("%d\n", num);
+//	return 0;
+//}
 int main()
 {
-	int qs = 0;//ÆûË®
-	int kp = 0;//¿ÕÆ¿
-	int yuan = 0;//Ç®
-	int num = 0;
-	while (yuan <= 0)
+	int i = 0;
+	int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	for (i = 0; i <= 12; i++)
 	{
-		printf("ÊäÈëÇ®Êı£º>   ");
-		scanf("%d", &yuan);
+		arr[i] = 0;
+		printf("hello bit\n");
 	}
-	qs = 1 * yuan;
-	while (qs > 0)
-	{
-		num += qs;
-		kp = qs;
-		qs = 0;
-		qs = kp / 2;
-	}
-	printf("%d\n", num);
 	return 0;
 }

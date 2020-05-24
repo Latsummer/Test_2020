@@ -90,14 +90,18 @@ public:
 
 	Date operator+(int day)
 	{
-		return *this += (day);
+		Date tmp(*this);
+		tmp += day;
+		return tmp;
 	}
 
   // 日期-天数
 
 	Date operator-(int day)
 	{
-		return *this-=(day);
+		Date tmp(*this);
+		tmp -= day;
+		return tmp;
 	}
 
    // 日期-=天数
@@ -203,27 +207,29 @@ public:
 		}
 		return false;*/
 
-		return *this > d || *this == d;
+		return (*this > d) || (*this == d);
 	}
 
   // <运算符重载
 
 	bool operator < (const Date& d)
 	{
+//
+//		if (_year < d._year)
+//			return true;
+//		else if (_year == d._year)
+//		{
+//			if (_month < d._month)
+//				return true;
+//			else if (_month == d._month)
+//			{
+//				if (_day < d._day)
+//					return true;
+//			}
+//		}
+//		return false;
 
-		if (_year < d._year)
-			return true;
-		else if (_year == d._year)
-		{
-			if (_month < d._month)
-				return true;
-			else if (_month == d._month)
-			{
-				if (_day < d._day)
-					return true;
-			}
-		}
-		return false;
+		return (*this >= d);
 	}
 
    // <=运算符重载
@@ -245,16 +251,17 @@ public:
 		}
 		return false;*/
 
-		return *this < d || *this == d;
+		return (*this < d) || (*this == d);
 	}
 
   // !=运算符重载
 
 	bool operator != (const Date& d)
 	{
-		return !(_year == d._year
+		/*return !(_year == d._year
 			&& _month == d._month
-			&& _day == d._day);
+			&& _day == d._day);*/
+		return !(*this == d);
 
 	}
 

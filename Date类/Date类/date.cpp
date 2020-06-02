@@ -70,7 +70,7 @@ public:
 		if (day >= 0)
 		{
 			_day += day;
-			while (_day <= GetMonthDay(_year, _month))
+			while (_day > GetMonthDay(_year, _month))
 			{
 				_day -= GetMonthDay(_year, _month);
 				_month++;
@@ -229,7 +229,7 @@ public:
 //		}
 //		return false;
 
-		return (*this >= d);
+		return !(*this >= d);
 	}
 
    // <=运算符重载

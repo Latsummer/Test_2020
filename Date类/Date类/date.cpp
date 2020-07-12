@@ -312,6 +312,10 @@ void test1()
 
 int main()
 {
-	test1();
+	//test1();
+	Date d1(2020, 6, 24);
+	Date d2;
+	d2 = d1 + 70;
+	
 	return 0;
 }
